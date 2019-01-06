@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.LocationSummary" table="location_summary" catalog="ceylon_journey_db">
+        <id name="locationId" type="int">
+            <column name="location_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="location" class="com.duminda.ceylonjourney.model.Location" update="false" insert="false" fetch="select">
+            <column name="location_id" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="locationIntroducedBy" type="string">
+            <column name="location_introduced_by" length="45" />
+        </property>
+        <property name="locationApprovedBy" type="string">
+            <column name="location_approved_by" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

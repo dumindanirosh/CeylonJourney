@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.Hotel" table="hotel" catalog="ceylon_journey_db">
+        <id name="hotelId" type="java.lang.Integer">
+            <column name="hotel_id" />
+            <generator class="identity" />
+        </id>
+        <property name="hotelName" type="string">
+            <column name="hotel_name" length="45" unique="true" />
+        </property>
+        <property name="hotelAddress" type="string">
+            <column name="hotel_address" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="email_address" length="45" />
+        </property>
+        <property name="hotelStatus" type="java.lang.Byte">
+            <column name="hotel_status" />
+        </property>
+        <property name="hotelDescription" type="string">
+            <column name="hotel_description" length="1000" />
+        </property>
+        <property name="enteredBy" type="string">
+            <column name="entered_by" length="45" />
+        </property>
+        <property name="enteredDate" type="timestamp">
+            <column name="entered_date" length="19" />
+        </property>
+        <set name="hotelImages" lazy="false" cascade="all" inverse="true">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.HotelImage" />
+        </set>
+        <set name="hotelTypes" lazy="false" cascade="all" inverse="false" table="hotel_category_type">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.HotelType">
+                <column name="hotel_type_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="hotelOfficers" cascade="all" inverse="true">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.HotelOfficer" />
+        </set>
+        <set name="locations" inverse="false" table="hotel_location">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.Location">
+                <column name="location_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="cityDetails" lazy="false" inverse="false" table="hotel_city">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.CityDetail">
+                <column name="city_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="hotelContacts" inverse="true">
+            <key>
+                <column name="hotel_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.HotelContact" />
+        </set>
+    </class>
+</hibernate-mapping>

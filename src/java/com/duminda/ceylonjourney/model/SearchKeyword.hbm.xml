@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.SearchKeyword" table="search_keyword" catalog="ceylon_journey_db">
+        <id name="keywordId" type="java.lang.Integer">
+            <column name="keyword_id" />
+            <generator class="identity" />
+        </id>
+        <property name="keywordName" type="string">
+            <column name="keyword_name" length="155" unique="true" />
+        </property>
+        <property name="keywordDescription" type="string">
+            <column name="keyword_description" />
+        </property>
+        <property name="keywordType" type="string">
+            <column name="keyword_type" length="45" />
+        </property>
+        <set name="locations" inverse="true" table="location_keyword">
+            <key>
+                <column name="keyword_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.Location">
+                <column name="location_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

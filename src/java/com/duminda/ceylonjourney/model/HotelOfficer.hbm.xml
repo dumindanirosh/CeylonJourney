@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.HotelOfficer" table="hotel_officer" catalog="ceylon_journey_db">
+        <id name="hotelOfficerId" type="java.lang.Integer">
+            <column name="hotel_officer_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" cascade="all" class="com.duminda.ceylonjourney.model.User" fetch="select">
+            <column name="username" length="45" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hotel" lazy="false" class="com.duminda.ceylonjourney.model.Hotel" fetch="select">
+            <column name="hotel_id" not-null="true" />
+        </many-to-one>
+        <property name="firstName" type="string">
+            <column name="first_name" length="45" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="45" />
+        </property>
+        <property name="officeTelephone" type="string">
+            <column name="office_telephone" length="45" />
+        </property>
+        <property name="mobileNumber" type="string">
+            <column name="mobile_number" length="45" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="email_address" length="155" />
+        </property>
+    </class>
+</hibernate-mapping>

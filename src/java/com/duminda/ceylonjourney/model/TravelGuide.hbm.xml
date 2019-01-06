@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 14, 2013 7:19:48 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.TravelGuide" table="travel_guide" catalog="ceylon_journey_db">
+        <id name="travelGuideId" type="java.lang.Integer">
+            <column name="travel_guide_id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="first_name" length="45" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="45" not-null="true" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="email_address" length="45" not-null="true" />
+        </property>
+        <property name="telephoneNumber" type="string">
+            <column name="telephone_number" length="45" />
+        </property>
+        <property name="mobileNumber" type="string">
+            <column name="mobile_number" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

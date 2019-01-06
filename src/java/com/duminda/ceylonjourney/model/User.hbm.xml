@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.User" table="user" catalog="ceylon_journey_db">
+        <id name="username" type="string">
+            <column name="username" length="45" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="userType" lazy="false"  class="com.duminda.ceylonjourney.model.UserType" fetch="select">
+            <column name="user_type_id" not-null="true" />
+        </many-to-one>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <property name="userStatus" type="java.lang.Boolean">
+            <column name="user_status" />
+        </property>
+        <set name="members" lazy="false"  cascade="all" inverse="true">
+            <key>
+                <column name="username" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.Member" />
+        </set>
+        <set name="internalOfficers" lazy="false" cascade="all" inverse="true">
+            <key>
+                <column name="username" length="45" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.InternalOfficer" />
+        </set>
+        <set name="hotelOfficers" lazy="false" cascade="all" inverse="true">
+            <key>
+                <column name="username" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.HotelOfficer" />
+        </set>
+        <set name="admins" lazy="false" cascade="all" inverse="true">
+            <key>
+                <column name="username" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.Admin" />
+        </set>
+    </class>
+</hibernate-mapping>

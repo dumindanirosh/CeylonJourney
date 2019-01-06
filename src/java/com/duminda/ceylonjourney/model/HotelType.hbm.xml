@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.HotelType" table="hotel_type" catalog="ceylon_journey_db">
+        <id name="hotelTypeId" type="java.lang.Integer">
+            <column name="hotel_type_id" />
+            <generator class="identity" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="type_name" length="45" />
+        </property>
+        <property name="hotelTypeStatus" type="java.lang.Byte">
+            <column name="hotel_type_status" />
+        </property>
+        <set name="hotels" inverse="true" cascade="all" table="hotel_category_type">
+            <key>
+                <column name="hotel_type_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.Hotel">
+                <column name="hotel_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

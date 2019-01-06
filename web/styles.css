@@ -1,0 +1,689 @@
+@charset "utf-8";
+
+body{
+    background:url(images/body_bg.png) repeat-x;
+}
+
+#wrapper{
+    width:1280px;
+    height:auto;
+    padding:5px;
+    margin-left:58px;
+}
+
+#header{
+    width:1275px;
+    height:150px;
+}
+
+#logo{
+    width:140px;
+    height:140px;
+    float:left;
+}
+
+#menu_bar{
+    width:960px;
+    height:75px;
+    float:left;
+    vertical-align:bottom;
+
+}
+#top_flash{
+    width:560px;
+    height:75px;
+    float:right;
+    vertical-align:bottom;
+    padding-right:175px;
+
+}
+#content_top{
+    width:1250px;
+    height:100px;
+}
+#content{
+    width:1250px;
+    height:500px;
+    padding-left:10px;
+    background:url(images/content_bg.png) repeat-y;
+
+}
+
+#content_left{
+    width:260px;
+    padding-left:50px;
+    float:left;
+
+}
+
+#content_left a{
+    font-size:14px;
+    color:#003300;
+}
+
+#content_left a:hover{
+    font-size:18px;
+    color:#000099;
+}
+
+#content_left #item{
+    width:220px;
+    height:30px;
+    margin-top:5px;
+    padding-left:30px;
+    padding-top:8px;
+    background:url(images/item_icon.png) left no-repeat;
+    font-weight:bold;
+    font-size:14px;
+
+}
+#content_title{
+    font-size:20px;
+    font-weight:bold;
+    color:#003300;
+    margin-top:5px;
+    margin-left:5px;
+}
+
+
+#content_right{
+    width:800px;
+    height:auto;
+    float:left;
+
+}
+
+#welcome_content{
+    width: 1250px;;
+    height: auto;
+    margin-top:5px;
+
+}
+#footer{
+    padding-top: 50px;
+    margin-top: 50px;
+
+    position: relative;
+    width:100%;
+    height:60px;
+
+}
+
+#welcome_flash{
+    width:680px;
+    height:300px;
+    float:left;
+    margin-left:5px;
+    margin-top:3px;
+    margin-bottom:5px;
+
+}
+#welcome_marquee{
+    width:520px;
+    height:30px;
+    font-size:20px;
+    color:#003333;
+    font-weight:bold;
+
+}
+
+
+#welcome_session{
+    width:520px;
+    height:30px;
+    font-size:14px;
+    color:#003300;
+    font-weight:bold;
+
+}
+
+#welcome_description{
+    width:520px;
+    margin-left:5px;
+    height:300px;
+    float:left;
+    margin-top:3px;
+    margin-bottom:5px;
+    font-size:16px;
+}
+#location_search_area{
+    width:700px;
+    height:auto;
+    float:left;
+    margin-left:5px;
+}
+
+#utility_box{
+    width:380px;
+    height:auto;
+    float:left;
+    margin-left:5px;
+}
+
+#search_engine{
+    width:680px;
+    height:200px;
+    float:left;
+    border: dotted;
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+#search_type_box{
+    width:680px;
+    height:90px;
+    float:left;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+#search_title{
+    font-size:18px;
+    font-weight:bold;
+    padding-left:15px;
+
+}
+
+#search_pattern{
+    width:680px;
+    height:30px;
+    float:left;
+    font-size:12px;
+    padding-top:5px;
+    padding-left:5px;
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+#search_type_radio{
+    width:220px;
+    height:20px;
+    float:left;
+    font-size:16px;
+    margin-left:5px;
+    margin-right:0px;
+    margin-top:1px;
+    margin-bottom:3px;
+}
+
+#location_types{
+    width:780px;
+    height:auto;
+    float:left;
+    margin-top:5px;
+}
+#location_type_box{
+    width:400px;
+    height:100px;
+}
+#location_type_row{
+    width:780px;
+    height:auto;
+    float:left;
+    margin-top:5px;
+
+}
+
+#location_type_row_title{
+    width:750px;
+    height:20px;
+    float:left;
+    margin-top:5px;
+
+}
+#location_box{
+    width:190px;
+    height:220px;
+    float:left;
+    margin-left:5px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+
+#location_box_title{
+    width:180px;
+    height:20px;
+    float:left;
+    margin-left:5px;
+    margin-top:1px;
+    margin-bottom:3px;
+}
+
+#login_box{
+    width:375px;
+    height:200px;
+    border:dotted;
+    float:left;
+    background:url(images/memberlogin.jpg) center top no-repeat;
+    padding-top:45px;
+}
+#login_messages{
+    width:375px;
+    height:auto;
+    color:#FF0000;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+}
+#forgot_password{
+    width:375px;
+    height:30px;
+    color:#FF0000;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+#sign_up{
+    width:375px;
+    height:30px;
+    color:#FF0000;
+    float:left;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+#sign_up a:hover{
+
+    font-size:25px;
+    color:#003300;
+}
+
+#login_field_name{
+    width:90px;
+    height:25px;
+    float:left;
+    font-size:14px;
+    color:#003300;
+    padding-left:32px;
+    padding-top:5px;
+    background:url(images/loginincon.jpg) no-repeat;
+}
+
+#login_field_name_no_img{
+    width:90px;
+    height:25px;
+    float:left;
+    font-size:14px;
+    color:#003300;
+    padding-left:32px;
+    padding-top:5px;
+
+}
+
+#login_field{
+    width:250px;
+    height:25px;
+    float:left;
+    padding-top:5px;
+}
+
+#templatemo_menu {
+    width: 900px;
+    height: 61px;
+    padding: 0 30px;
+    background: url(images/templatemo_menu.jpg) no-repeat top center
+}
+
+#templatemo_menu ul { margin: 0; padding: 3px 0 0 0; list-style: none }
+#templatemo_menu ul li { padding: 0; margin: 0; display: inline }
+#templatemo_menu ul li a {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 6px 0 0 0;
+    margin-right: 1px;
+    font-size: 14px;
+    color: #333;
+    /* text-shadow: 1px 1px 1px #b0da81; */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; 
+    outline: none;
+}
+
+#templatemo_menu ul li a:hover, #templatemo_menu ul .current {
+    color: #fff;
+    /* text-shadow: 1px 1px 1px #555; */
+    background: url(images/templatemo_menu_hover.jpg) no-repeat }	
+
+#message_box{
+    width:750px;
+    height:30px;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+}	
+
+#dashboard_marquee{
+    width:960px;
+    height:100px;
+    float:left;
+    vertical-align:bottom;
+    font-size:18px;
+    font-weight:bold;
+    color:#003333;
+    padding-bottom:10px;
+    padding-left:20px;
+}
+
+#error_messages_box{
+    width:375px;
+    height:auto;
+    color:#FF0000;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#success_messages_box{
+    width:375px;
+    height:auto;
+    color:#0000CC;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#location_view_box{
+    width:900px;
+    height:auto;
+    padding-top:5px;	
+}
+#location_welcome_image{
+    width:200px;
+    height:200px;
+    float:left;
+    margin:5px;
+}
+#location_description{
+    width: 750px;
+    height:200px;
+    margin:5px;
+    font-size:14px;
+
+
+}
+#view_hotels_locations{
+    width:900px;
+    height:auto;
+    float:left;
+    padding-left:200px;
+
+}
+
+#view_hotels_locations_welcome_img{
+    width:200px;
+    height:200px;
+    margin:5px;
+    float:left;
+
+}
+
+#view_hotels_locations_content{
+    width:800px;
+    height:200px;
+    margin:5px;
+    float:left;
+    padding-top:25px;
+}
+#monthly_location{
+    width:500px;
+    height:220px;
+    float:left;
+    padding-bottom: 5px;
+}
+#monthly_location_title{
+    width:500px;
+    height:20px;
+    font-size:16px;
+    font-weight:bold;
+    color:#3C0;
+
+}
+#monthly_location_description{
+    width:290px;
+    height:190px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+#monthly_location_description_for_dashboard{
+    width:630px;
+    height:190px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+#monthly_location_image_box{
+    width:190px;
+    height:190px;
+    float:left;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+
+#view_selected_location{
+    width:1000px;
+    height:auto;
+    margin:0px;
+    float:left;
+}
+
+#view_hotels_locations_home{
+    width:1000px;
+    height:200px;
+    margin:0px;
+    padding-top:20px;
+    padding-bottom: 100px;
+}
+
+#vew_selected_location_table{
+    width:700px;
+    height:300px;
+    float:left;
+}
+#view_selected_location_description{
+    width:500px;
+    height:190px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+#view_selected_location_description_title{
+    width:150px;
+    height:190px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+#download_android_app_box{
+    width:375px;
+    height:100px;
+    border:dotted;
+    float:left;
+    background:url(images/android.jpg) center top no-repeat;
+    padding-top: 50px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#time_box{
+    width:375px;
+    height:500px;
+    float:left;
+    border: dotted;
+    background:url(images/weather.jpg) center top no-repeat;
+    padding-top:5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#empty_box{
+    width:150px;
+    height:25px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:14px;
+}
+
+#send_mail{
+    width:375px;
+    height:100px;
+    border:dotted;
+    float:left;
+    background:url(images/mail.png) left top no-repeat;
+    padding-top: 50px;
+    padding-left:25px;
+    margin-left: 400px;
+    margin-top: 25px;
+    color:#003300;
+}
+
+
+#signup_box{
+    width:auto;
+    height:auto;
+    float:left;
+    background:url(images/user.png) left top no-repeat;
+    padding-top: 25px;
+    padding-left:40px;
+    margin-left: 350px;
+    margin-top: 25px;
+    color:#003300;
+}
+
+
+
+#location_comment{
+    border: dotted;
+    width:830px;
+    height:auto;
+    min-height: 100px;
+    margin:5px;
+    float:left;
+}
+
+#location_vote{
+    width:830px;
+    height:auto;
+    min-height: 10px;
+    margin:5px;
+    float:next;
+}
+
+#location_vote_content{
+    width:auto;
+    height:16px;
+    font-size: 18px;
+    font-weight: bold;
+    float:left;
+    padding-top: 10px;
+}
+
+#view_location_comment{
+    width:820px;
+    height:auto;
+    margin:5px;
+    float:left;
+    border-bottom: groove;
+    font-size: 16px;
+}
+#location_comment_title{
+    width:830px;
+    height:auto;
+    margin:2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: darkgreen;
+    float:left;
+}
+
+#session_tracking{
+    width:830px;
+    height:150px;
+    font-size:14px;
+    float:left;
+    margin-right:10px;
+}
+
+#clock_table{
+    width : 830px;
+    height: 170px;
+    font-size:16px;
+    font-weight:bold;
+    color:#003300;
+    border-bottom: groove;
+}
+
+#illegal_access{
+    width:600px;
+    height:100px;
+    float:left;
+    padding-top: 50px;
+    padding-left:25px;
+    margin-left: 300px;
+    margin-top: 25px;
+    color:red;
+}
+
+#contact_content{
+    width:800px;
+    height:600px;
+    float:left;
+    padding-top: 50px;
+    padding-left:50px;
+    margin-left: 150px;
+    margin-top: 25px;
+    color:#003300;
+}
+#google_map{
+    width:425px;
+    height:350px;
+    float:left;
+    padding-top: 5px;
+    margin-top: 5px;
+    color:#003300;
+}
+#contact_title{
+    width:350px;
+    height:20px;
+    float:left;
+    padding-top: 5px;
+    margin-top: 5px;
+    color:#003300;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#contact_detail{
+    width:360px;
+    height:350px;
+    float:left;
+    padding-top: 5px;
+    margin: 5px;
+    color:#003300;
+}
+#footer_box{
+    width:100%;
+    height:100px;
+    float: left;
+    margin-left:5px;
+}
+
+.cleaner { clear: both }

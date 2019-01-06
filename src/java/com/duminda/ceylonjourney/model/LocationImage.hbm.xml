@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.LocationImage" table="location_image" catalog="ceylon_journey_db">
+        <composite-id name="id" class="com.duminda.ceylonjourney.model.LocationImageId">
+            <key-property name="locationId" type="int">
+                <column name="location_id" />
+            </key-property>
+            <key-property name="imageName" type="string">
+                <column name="image_name" length="45" />
+            </key-property>
+        </composite-id>
+        <property name="imageUrl" type="string">
+            <column name="image_url" length="155" />
+        </property>
+        <property name="imageType" type="string">
+            <column name="image_type" length="45" />
+        </property>
+        <property name="imageSize" type="string">
+            <column name="image_size" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

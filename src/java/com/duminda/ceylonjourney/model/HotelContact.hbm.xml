@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.HotelContact" table="hotel_contact" catalog="ceylon_journey_db">
+        <composite-id name="id" class="com.duminda.ceylonjourney.model.HotelContactId">
+            <key-property name="hotelId" type="int">
+                <column name="hotel_id" />
+            </key-property>
+            <key-property name="contactNumber" type="string">
+                <column name="contact_number" length="45" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="hotel" class="com.duminda.ceylonjourney.model.Hotel" update="false" insert="false" fetch="select">
+            <column name="hotel_id" not-null="true" />
+        </many-to-one>
+        <property name="contactType" type="string">
+            <column name="contact_type" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.Location" table="location" catalog="ceylon_journey_db">
+        <id name="locationId" type="java.lang.Integer">
+            <column name="location_id" />
+            <generator class="identity" />
+        </id>
+        <property name="locationName" type="string">
+            <column name="location_name" length="155" not-null="true" />
+        </property>
+        <property name="locationDescription" type="string">
+            <column name="location_description" length="1000" />
+        </property>
+        <property name="locationAddress" type="string">
+            <column name="location_address" length="155" />
+        </property>
+        <property name="locationStatus" type="java.lang.Byte">
+            <column name="location_status" />
+        </property>
+        <property name="welcomeImageName" type="string">
+            <column name="welcome_image_name" length="45" />
+        </property>
+        <property name="welcomeImageUrl" type="string">
+            <column name="welcome_image_url" length="155" />
+        </property>
+         <property name="numberOfVotes" type="java.lang.Integer">
+            <column name="number_of_votes"/>
+        </property>
+        <property name="enteredBy" type="string">
+            <column name="entered_by" length="45" />
+        </property>
+        <property name="enteredDate" type="timestamp">
+            <column name="entered_date" length="19" />
+        </property>
+        <set name="locationSummaries" inverse="true">
+            <key>
+                <column name="location_id" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.LocationSummary" />
+        </set>
+        <set name="searchKeywords" inverse="false" table="location_keyword">
+            <key>
+                <column name="location_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.SearchKeyword">
+                <column name="keyword_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="hotels" inverse="true" table="hotel_location">
+            <key>
+                <column name="location_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.Hotel">
+                <column name="hotel_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="cityDetails" lazy="false" inverse="false" table="location_city">
+            <key>
+                <column name="location_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.duminda.ceylonjourney.model.CityDetail">
+                <column name="city_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="locationSearchTypes" inverse="true">
+            <key>
+                <column name="location_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.LocationSearchType" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ceylon_journey_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root123</property>
+    <mapping resource="com/duminda/ceylonjourney/model/HotelType.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/Hotel.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/HotelOfficer.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/Location.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/SearchKeyword.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/HotelImage.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/DistrictDetail.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/LocationSearchType.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/SearchType.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/Admin.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/InternalOfficer.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/HotelContact.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/Member.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/CityDetail.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/LocationSummary.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/User.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/UserType.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/LocationImage.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/TravelGuide.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/HotLocation.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/LocationComment.hbm.xml"/>
+    <mapping resource="com/duminda/ceylonjourney/model/HotelContract.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

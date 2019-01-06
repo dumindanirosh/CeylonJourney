@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 22, 2013 2:25:23 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.HotelContract" table="hotel_contract" catalog="ceylon_journey_db">
+        <id name="hotelId" type="int">
+            <column name="hotel_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19" not-null="true" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19" not-null="true" />
+        </property>
+        <property name="enteredDate" type="timestamp">
+            <column name="entered_date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.LocationSearchType" table="location_search_type" catalog="ceylon_journey_db">
+        <composite-id name="id" class="com.duminda.ceylonjourney.model.LocationSearchTypeId">
+            <key-property name="locationId" type="int">
+                <column name="location_id" />
+            </key-property>
+            <key-property name="searchTypeId" type="int">
+                <column name="search_type_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="searchType" class="com.duminda.ceylonjourney.model.SearchType" update="false" insert="false" fetch="select">
+            <column name="search_type_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="location" class="com.duminda.ceylonjourney.model.Location" update="false" insert="false" fetch="select">
+            <column name="location_id" not-null="true" />
+        </many-to-one>
+        <property name="locationTypeStatus" type="java.lang.Byte">
+            <column name="location_type_status" />
+        </property>
+    </class>
+</hibernate-mapping>

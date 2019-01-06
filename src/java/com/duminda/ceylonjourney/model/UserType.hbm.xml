@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2013 11:55:41 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.UserType" table="user_type" catalog="ceylon_journey_db">
+        <id name="userTypeId" type="java.lang.Integer">
+            <column name="user_type_id" />
+            <generator class="identity" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="type_name" length="45" />
+        </property>
+        <property name="loginTypeStatus" type="java.lang.Byte">
+            <column name="login_type_status" />
+        </property>
+        <set name="users" inverse="true">
+            <key>
+                <column name="user_type_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.User" />
+        </set>
+    </class>
+</hibernate-mapping>

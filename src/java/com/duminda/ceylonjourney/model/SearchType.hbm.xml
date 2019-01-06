@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2013 12:10:40 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.SearchType" table="search_type" catalog="ceylon_journey_db">
+        <id name="searchTypeId" type="java.lang.Integer">
+            <column name="search_type_id" />
+            <generator class="identity" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="type_name" length="45" unique="true" />
+        </property>
+        <property name="typeStatus" type="java.lang.Byte">
+            <column name="type_status" />
+        </property>
+        <property name="typeDescription" type="string">
+            <column name="type_description" />
+        </property>
+        <set name="locationSearchTypes" inverse="true">
+            <key>
+                <column name="search_type_id" not-null="true" />
+            </key>
+            <one-to-many class="com.duminda.ceylonjourney.model.LocationSearchType" />
+        </set>
+    </class>
+</hibernate-mapping>

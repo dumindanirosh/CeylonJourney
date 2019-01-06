@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 20, 2013 12:36:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.duminda.ceylonjourney.model.HotLocation" table="hot_location" catalog="ceylon_journey_db">
+        <id name="locationId" type="int">
+            <column name="location_id" />
+            <generator class="assigned" />
+        </id>
+    </class>
+</hibernate-mapping>
